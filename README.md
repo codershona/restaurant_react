@@ -53,3 +53,19 @@
 
 
 ```
+
+# Working on project :
+
+```
+   
+   * Configure your React Project to use Reactstrap: yarn add bootstrap@4.0.0 / yarn add reactstrap@5.0.0 / yarn add react-popper@0.9.2 ;
+
+   * Configure to use Bootstrap 4, Next, open index.js file in the src folder and add the following line into the imports: import 'bootstrap/dist/css/bootstrap.min.css'; 
+   
+   * Run yarn start and then check the browser ;
+   * 
+
+
+
+
+```
