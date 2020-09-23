@@ -63,9 +63,40 @@
    * Configure to use Bootstrap 4, Next, open index.js file in the src folder and add the following line into the imports: import 'bootstrap/dist/css/bootstrap.min.css'; 
    
    * Run yarn start and then check the browser ;
+   * Browserslist: caniuse-lite is outdated. Please run the following command: `npx browserslist --update-db` ;
+
    * 
 
 
+```
+
+# React Components: State and Props :
+
+```
+    
+    * State declared within the constructor :
+        class Menu extends Component {
+
+    	constructor(props) {
+    		super(props);
+
+    		this.state = {
+    			selectedDish: null
+    		}
+    	}
+    	......
+    }
+
+    * State should only be modified using setState() :
+
+       onDishSelect(dish) {
+       	 this.setState({
+       	 	selectedDish: dish
+       	 	});
+       }
+
+    * Never do the following: this.state.selectedDish = dish;
+    
 
 
 ```
