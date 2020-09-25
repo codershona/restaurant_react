@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
 
-import Menu from '../components/MenuComponent';
+// import Menu from '../components/MenuComponent';
 
 class Dishdetail extends Component {
 
@@ -15,8 +15,41 @@ class Dishdetail extends Component {
   render() {
     return (
       <div>
-        <h4>Comments</h4>
-        <p>Imagine all the eatables, living in Confusion!</p>
+        <CardBody>
+         <CardTitle><h4>Comments</h4></CardTitle>
+         <CardText>
+         <ul class="list-unstyled">
+         <li>Imagine all the eatables, living in conFusion!</li>
+         <br/>
+     <li>-- John Lemon, Oct 17, 2012</li>
+     <br/>
+  <li>Sends anyone to heaven, I wish I could get my mother-in-law to eat it!</li>
+  <br/>
+  <li>-- Paul McVites, Sep 06, 2014</li>
+  <br/>
+  <li>Eat it, just eat it!</li>
+  <br/>
+  <li>Michael Jaikishan, Feb 14, 2015</li>
+
+
+  <br/>
+
+  <li>Ultimate, Reaching for the stars!</li>
+  <br/>
+  <li>-- Ringo Starry, Dec 03, 2013</li>
+  <br/>
+  <li>It's your birthday, we're gonna party!</li>
+  <br/>
+  <li>-- 25 Cent, Dec 03, 2011</li>
+
+  <br/>
+ 
+
+</ul>
+
+</CardText>
+
+    </CardBody>
       </div>
     );
   }
