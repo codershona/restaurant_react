@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './components/MenuComponent';
 import { DISHES } from './shared/dishes';
-import Dishdetail from './components/DishdetailComponent';
+// import Dishdetail from './components/DishdetailComponent';
 
 
 class App extends Component {
@@ -13,8 +13,11 @@ class App extends Component {
 
 
     this.state = {
-      dishes: DISHES
+      dishes: DISHES,
+      comments: DISHES
     };
+
+  
   }
 
   render() {
@@ -29,11 +32,13 @@ class App extends Component {
           </div>
         </Navbar>
 
+
        
          <Menu dishes={this.state.dishes} />
+     
 
-
-      </div>
+    </div>
+     
       );
   }
 }
