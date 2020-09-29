@@ -6,9 +6,9 @@ import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
 class Menu extends Component {
 
-	constructor(props) {
-		super(props); 
-	}
+  componentDidMount() {
+    console.log('Menu component componentDidMount invoked!');
+  }
 
 
 

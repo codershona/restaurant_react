@@ -1,65 +1,91 @@
 import React, { Component } from 'react';
-import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardText, CardBody, CardTitle, CardImg } from 'reactstrap';
 
 // import Menu from '../components/MenuComponent';
 
 class DishDetail extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-    	comments: []
-    };
+ 
+  componentDidMount() {
+    console.log('DishDetail component componentDidMount invoked!');
+  }
+   componentDidUpdate() {
+    console.log('DishDetail component componentDidUpdate invoked!');
   }
 
 
 
-  render() {
+  renderDish(dish) {
     return (
-      <div class="container col-12 col-md-5 m-1">
+      <div class="col-12 col-md-5 m-1">
       <Card>
+      <CardImg top src={dish.image} alt={dish.name} />
         <CardBody>
-         <CardTitle><h4>Comments</h4></CardTitle>
+         <CardTitle>{dish.name}</CardTitle>
          <CardText>
-         <ul class="list-unstyled">
-         <li>Imagine all the eatables, living in conFusion!</li>
-         <br/>
-     <li>-- John Lemon, Oct 17, 2012</li>
-     <br/>
-  <li>Sends anyone to heaven, I wish I could get my mother-in-law to eat it!</li>
-  <br/>
-  <li>-- Paul McVites, Sep 06, 2014</li>
-  <br/>
-  <li>Eat it, just eat it!</li>
-  <br/>
-  <li>Michael Jaikishan, Feb 14, 2015</li>
-
-
-  <br/>
-
-  <li>Ultimate, Reaching for the stars!</li>
-  <br/>
-  <li>-- Ringo Starry, Dec 03, 2013</li>
-  <br/>
-  <li>It's your birthday, we're gonna party!</li>
-  <br/>
-  <li>-- 25 Cent, Dec 03, 2011</li>
-
-  <br/>
- 
-
-</ul>
-
-</CardText>
+         {dish.description}
+       </CardText>
 
     </CardBody>
+  
     </Card>
       </div>
     );
   }
+
+    renderComments(comments) {
+
+      if(comments != null)
+
+        return(
+          <div className="col-12 col-md-5 m-1">
+          <h4>Comments</h4>
+          <ul className="list-unstyled">
+           {comments.map((comment) => {
+            return(
+              <li key={comment.id}>
+            <p>{comment.comment}</p>
+            <p>--- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))} 
+            </p>
+            </li>
+       );
+    })}
+
+     </ul>
+
+          </div>
+
+          );
+
+     else
+      return(
+        <div></div>
+        );
+  }
+
+  render() {
+
+    console.log('dishdetail component component render invoked');
+
+    if (this.props.dish != null)
+      return (
+        <div class="container">
+        <div className="row">
+
+        {this.renderDish(this.props.dish)}
+        {this.renderComments(this.props.dish.comments)}
+
+        </div>
+        </div>
+        );
+     else 
+      return(
+
+        <div></div>
+
+        );
+  }
+
 }
 
 export default DishDetail;
-
-
-{/* {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))} */}
