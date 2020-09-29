@@ -1,9 +1,6 @@
 # Restaurant App
 
 
-
-
-
 * NOTES :
 
 ```
@@ -65,7 +62,7 @@
    * Run yarn start and then check the browser ;
    * Browserslist: caniuse-lite is outdated. Please run the following command: `npx browserslist --update-db` ;
 
-   * 
+   * Working on React Components Types.
 
 
 ```
