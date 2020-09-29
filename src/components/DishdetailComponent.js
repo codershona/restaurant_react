@@ -3,7 +3,7 @@ import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
 
 // import Menu from '../components/MenuComponent';
 
-class Dishdetail extends Component {
+class DishDetail extends Component {
 
   constructor(props) {
     super(props);
@@ -12,9 +12,12 @@ class Dishdetail extends Component {
     };
   }
 
+
+
   render() {
     return (
-      <div>
+      <div class="container col-12 col-md-5 m-1">
+      <Card>
         <CardBody>
          <CardTitle><h4>Comments</h4></CardTitle>
          <CardText>
@@ -50,9 +53,13 @@ class Dishdetail extends Component {
 </CardText>
 
     </CardBody>
+    </Card>
       </div>
     );
   }
 }
 
-export default Dishdetail;
+export default DishDetail;
+
+
+{/* {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))} */}
