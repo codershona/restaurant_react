@@ -62,10 +62,13 @@ function RenderMenuItem({ dish, onClick }) {
 
                 <div className="row">
 
+                
                     {menu}
 
+
+
                 </div>
-                
+
             </div>
         );
 

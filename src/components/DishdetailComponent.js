@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
   function RenderDish({dish}) {
 
     return (
+      <div className="container">
       <div class="col-12 col-md-5 m-1">
       <Card>
       <CardImg top src={dish.image} alt={dish.name} />
@@ -19,6 +20,7 @@ import { Link } from 'react-router-dom';
     </CardBody>
   
     </Card>
+      </div>
       </div>
     );
   }
@@ -68,16 +70,34 @@ import { Link } from 'react-router-dom';
                         <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
                     </Breadcrumb>
                     <div className="col-12">
+                  
                         <h3>{props.dish.name}</h3>
                         <hr />
+
                     </div>                
                 </div>
                 <div className="row">
                     <div className="col-12 col-md-5 m-1">
+                      <Card>
+                      <CardBody>
+
                         <RenderDish dish={props.dish} />
+
+
+                        </CardBody>
+
+                          </Card>
                     </div>
-                    <div className="col-12 col-md-5 m-1">
+                    <div className="container col-12 col-md-5 m-1">
+                    <Card>
+
+                    <CardBody>
                         <RenderComments comments={props.comments} />
+
+
+                        </CardBody>
+
+                        </Card>
                     </div>
                 </div>
                 </div>
@@ -86,7 +106,7 @@ import { Link } from 'react-router-dom';
 
 
      else 
-      
+
       return(
 
         <div></div>
