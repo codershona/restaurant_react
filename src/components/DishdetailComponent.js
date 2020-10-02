@@ -1,10 +1,13 @@
 import React from 'react';
-import { Card, CardText, CardBody, CardTitle, CardImg } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody,
+    CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
   function RenderDish({dish}) {
 
     return (
+      <div className="container">
       <div class="col-12 col-md-5 m-1">
       <Card>
       <CardImg top src={dish.image} alt={dish.name} />
@@ -17,6 +20,7 @@ import { Card, CardText, CardBody, CardTitle, CardImg } from 'reactstrap';
     </CardBody>
   
     </Card>
+      </div>
       </div>
     );
   }
@@ -56,17 +60,53 @@ import { Card, CardText, CardBody, CardTitle, CardImg } from 'reactstrap';
     console.log('dishdetail component component render invoked!!!');
 
     if (props.dish != null)
-      return (
-        <div class="container">
-        <div className="row">
 
-        <RenderDish dish={props.dish} />
-        <RenderComments comments={props.dish.comments} />
+         return (
+                <div className="container">
+                <div className="row">
+                    <Breadcrumb>
 
-        </div>
-        </div>
-        );
+                        <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
+                        <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
+                    </Breadcrumb>
+                    <div className="col-12">
+                  
+                        <h3>{props.dish.name}</h3>
+                        <hr />
+
+                    </div>                
+                </div>
+                <div className="row">
+                    <div className="col-12 col-md-5 m-1">
+                      <Card>
+                      <CardBody>
+
+                        <RenderDish dish={props.dish} />
+
+
+                        </CardBody>
+
+                          </Card>
+                    </div>
+                    <div className="container col-12 col-md-5 m-1">
+                    <Card>
+
+                    <CardBody>
+                        <RenderComments comments={props.comments} />
+
+
+                        </CardBody>
+
+                        </Card>
+                    </div>
+                </div>
+                </div>
+
+            );
+
+
      else 
+
       return(
 
         <div></div>

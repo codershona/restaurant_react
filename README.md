@@ -63,6 +63,9 @@
    * Browserslist: caniuse-lite is outdated. Please run the following command: `npx browserslist --update-db` ;
 
    * Working on React Components Types.
+   * React router: (Using Font Awesome Icons and Bootstrap-Social): yarn add font-awesome@4.7.0 / yarn add bootstrap-social@5.1.1 ;
+   * Installing and Configuring React Router: yarn add react-router-dom@4.2.2 ;
+   * 
 
 
 ```
