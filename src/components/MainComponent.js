@@ -59,13 +59,7 @@ class Main extends Component {
       );
     };
 
-     const LeaderWithId = ({match}) => {
-      return(
-          <About leader={this.state.leaders.filter((leader) => leader.id === parseInt(match.params.leaderId,10))[0]} 
-           />
-      );
-    };
-
+  
     return (
       <div>
 
@@ -74,13 +68,25 @@ class Main extends Component {
       <Switch>
 
        <Route path='/home' component={HomePage} />
+
+
       
       <Route exact path='/menu' component={() => 
         <Menu dishes={this.state.dishes} />} />
 
+
+        <Route exact path="/aboutus" component={() => 
+            <About leaders={this.state.leaders} />} />
+
+
+
         <Route exact path='/contactus' component={Contact} />} />
 
-        <Route exact path='/aboutus' component={About} />} />
+
+
+           
+
+
 
          <Route path='/menu/:dishId' component={DishWithId} />
         
