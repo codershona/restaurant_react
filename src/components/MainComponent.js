@@ -20,6 +20,8 @@ import Contact from './ContactComponent';
 
 import About from './AboutComponent';
 
+import MoreInfo from './MoreInformationComponent';
+
 
 
 
@@ -77,6 +79,11 @@ class Main extends Component {
 
         <Route exact path="/aboutus" component={() => 
             <About leaders={this.state.leaders} />} />
+
+            <Route exact path="/moreinformation" component={() => 
+            <MoreInfo promotions={this.state.promotions} />} />
+
+
 
 
 
