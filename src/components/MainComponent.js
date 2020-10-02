@@ -59,6 +59,13 @@ class Main extends Component {
       );
     };
 
+     const LeaderWithId = ({match}) => {
+      return(
+          <About leader={this.state.leaders.filter((leader) => leader.id === parseInt(match.params.leaderId,10))[0]} 
+           />
+      );
+    };
+
     return (
       <div>
 

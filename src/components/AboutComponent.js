@@ -2,9 +2,12 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function About(props) {
 
-    
+
+
+const About = (props) => {
+
+
     return(
         <div className="container">
             <div className="row">
@@ -61,7 +64,43 @@ function About(props) {
                 </div>
                 <div className="col-12">
                     <Media list>
-                        {/* {leaders} */}
+
+                     <div className="container">
+      <Media>
+        <Media left top href="#">
+          <Media width="100%" src="./images/alberto.png" />
+        </Media>
+        <Media body>
+          <Media heading>
+           Dhanasekaran Witherspoon
+          </Media>
+         Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, Everything that runs, wins, and everything that stays, pays!
+        </Media>
+      </Media>
+      <Media className="mt-1">
+        <Media left middle href="#">
+          <Media width="100%" src="/assets/images/alberto.png" />
+        </Media>
+        <Media body>
+          <Media heading>
+            Agumbe Tang
+          </Media>
+          Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, You click only if you survive my lick.
+        </Media>
+      </Media>
+      <Media className="mt-1">
+        <Media left bottom href="#">
+          <Media width="100%" src="/assets/images/alberto.png" />
+        </Media>
+        <Media body>
+          <Media heading>
+            Alberto Somayya
+          </Media>
+         Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!
+        </Media>
+      </Media>
+    </div>
+                        
                     </Media>
                 </div>
             </div>
