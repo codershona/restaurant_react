@@ -18,16 +18,7 @@ import About from './AboutComponent';
 import MoreInfo from './MoreInformationComponent';
 
 
-
-
-class Main extends Component {
-
-  constructor(props) {
-    super(props);
-
-  }
-
-  const mapStateToProps = state => {
+const mapStateToProps = state => {
   return {
     dishes: state.dishes,
     comments: state.comments,
@@ -35,6 +26,13 @@ class Main extends Component {
     leaders: state.leaders
   }
 }
+
+class Main extends Component {
+
+  constructor(props) {
+    super(props);
+
+  }
 
 
    render() {
