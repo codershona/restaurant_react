@@ -100,3 +100,16 @@
 
 
 ```
+
+# The Redux Flux Architecture:
+
+```
+  * ACTION ----> DISPATCHER ----> STORE -----> VIEW
+  * ACTION -----> DISPATCHER ---> VIEW
+  * New actions propagated through the system in response to user interactions(UI);
+
+
+```
+
+
+
