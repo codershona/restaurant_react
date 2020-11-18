@@ -107,6 +107,9 @@
   * ACTION ----> DISPATCHER ----> STORE -----> VIEW
   * ACTION -----> DISPATCHER ---> VIEW
   * New actions propagated through the system in response to user interactions(UI);
+  * Uni directional data flow:
+  Action ----> STORE [ Dispatch ----> Reducer + State -----> View] 
+  
 
 
 ```
