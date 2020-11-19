@@ -110,8 +110,6 @@
   * Uni directional data flow:
   Action ----> STORE [ Dispatch ----> Reducer + State -----> View] 
   
-
-
 ```
 
 
