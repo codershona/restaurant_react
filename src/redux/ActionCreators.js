@@ -27,7 +27,7 @@ export const dishesLoading = () => ({
 });
 
 export const dishesFailed = (errmess) => ({
-	type: ActionTypes.DISHES_FAILED
+	type: ActionTypes.DISHES_FAILED,
 	payload: errmess
 });
 
