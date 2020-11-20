@@ -112,5 +112,18 @@
   
 ```
 
+# Client-Server Communication:
 
+```
+  * Installation json-server : sudo npm install json-server -g;
+  *  json-server --watch db.json -p 3001 -d 2000
+  * View on the browser: http://localhost:3001/dishes
+   http://localhost:3001/promotions
+   http://localhost:3001/leaders
+   http://localhost:3001/feedback
+
+  * http://localhost:3001/
+  * http://localhost:3001/images/<image name>.png
+
+```
 
