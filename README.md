@@ -109,6 +109,9 @@
   * New actions propagated through the system in response to user interactions(UI);
   * Uni directional data flow:
   Action ----> STORE [ Dispatch ----> Reducer + State -----> View] 
+  * yarn add redux-thunk@2.2.0
+  * yarn add redux-logger@3.0.6
+
   
 ```
 
@@ -116,7 +119,7 @@
 
 ```
   * Installation json-server : sudo npm install json-server -g;
-  *  json-server --watch db.json -p 3001 -d 2000
+  * json-server --watch db.json -p 3001 -d 2000
   * View on the browser: http://localhost:3001/dishes
    http://localhost:3001/promotions
    http://localhost:3001/leaders
@@ -127,3 +130,10 @@
 
 ```
 
+# Fetch:
+
+```
+  * yarn add cross-fetch@2.1.0;
+  * Reacr animations;
+
+```
