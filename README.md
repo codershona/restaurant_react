@@ -134,6 +134,7 @@
 
 ```
   * yarn add cross-fetch@2.1.0;
-  * Reacr animations;
+  * React animations installation: yarn add react-transition-group@2.3.0;
+  * 
 
 ```
