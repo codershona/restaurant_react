@@ -135,6 +135,6 @@
 ```
   * yarn add cross-fetch@2.1.0;
   * React animations installation: yarn add react-transition-group@2.3.0;
-  * 
+  * Install react-animation-components: yarn add react-animation-components@3.0.0 / yarn add prop-types@15.6.0;
 
 ```
