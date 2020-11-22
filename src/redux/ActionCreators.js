@@ -68,7 +68,7 @@ export const fetchDishes = () => (dispatch) => {
     .then(response => response.json())
     .then(dishes => dispatch(addDishes(dishes)))
     .catch(error => dispatch(dishesFailed(error.message)));
-}
+};
 
 
 export const dishesLoading = () => ({

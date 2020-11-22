@@ -24,7 +24,7 @@ function RenderCard({item, isLoading, errMess}) {
     } else 
 
         return(
-         <FadeTransform
+          <FadeTransform
                 in
                 transformProps={{
                     exitTransform: 'scale(0.5) translateY(-50%)'
@@ -68,3 +68,8 @@ function Home(props) {
 }
 
 export default Home; 
+
+
+
+
+
